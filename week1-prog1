@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    #ifdef _WIN32
+        printf("Windows: Size of int: %d bytes\n", sizeof(int));
+    #elif __linux__
+        printf("Linux: Size of int: %ld bytes\n", sizeof(int));
+    #else
+        printf("Unknown platform\n");
+    #endif
+    return 0;
+}
